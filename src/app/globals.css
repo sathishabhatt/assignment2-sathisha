@@ -1,27 +1,176 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Global styles for the page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #000; /* Set background to black */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Center the search engine vertically */
+  padding: 20px;
+  text-align: center;
+  color: #fff; /* Set text color to white */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.content {
+  max-width: 600px;
+  width: 100%;
+  background-color: #1c1c1c;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4a90e2;
+  font-weight: 700;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 70%;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px #4a90e2;
+}
+
+.search-button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #357ABD;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-card {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #2a2a2a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #4a90e2;
+}
+
+.error-text, .loading-text, .no-results {
+  font-size: 1.2rem;
+  color: #1a226a;
+}
+
+ /* Add this to your global CSS or module CSS */
+.container, .search-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title, .search-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.movie-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.movie-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.movie-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.movie-table td {
+  color: #333;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #357ABD;
 }
